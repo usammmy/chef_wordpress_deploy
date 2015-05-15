@@ -9,3 +9,13 @@ Description
 ===========
 
 This project describes how to build a Wordpress application using cookbooks available from Chef Supermarket and wrapper cookbooks in a Hosted Chef Repository.
+
+Known bugs - 
+ - Galera nodes are failing to join the cluster except for the primary node.
+
+Future - 
+ - Fix mysql galera cluster to be more robust 
+ - Explore other master-slave architectures
+ - Memcached for PHP session storage 
+
+ 
