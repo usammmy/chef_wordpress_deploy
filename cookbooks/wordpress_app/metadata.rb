@@ -1,5 +1,5 @@
 name             'wordpress_app'
-maintainer       'The Authors'
+maintainer       'usammmy'
 maintainer_email 'you@example.com'
 license          'all_rights'
 description      'Installs/Configures wordpress_app'

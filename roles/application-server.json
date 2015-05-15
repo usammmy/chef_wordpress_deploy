@@ -5,15 +5,6 @@
   "default_attributes": {
   },
   "override_attributes": {
-    "wordpress": {
-      "version": "latest",
-      "db": {
-        "name": "mylittlepony",
-        "user": "fluttershy",
-        "pass": "random_secret",
-        "host": "10.10.10.11"
-      }
-    }
   },
   "chef_type": "role",
   "run_list": [
