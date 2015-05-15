@@ -1,4 +1,3 @@
 # wordpress_app
 
-TODO: Enter the cookbook description here.
-
+This cookbook configures application/web servers required for a Wordpress deployment.

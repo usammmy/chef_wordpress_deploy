@@ -7,7 +7,6 @@
 
 include_recipe 'mysql2_chef_gem'
 include_recipe 'mysql::server'
-# include_recipe 'database'
 
 mysql_connection_info = {
   :host => 'localhost',
@@ -26,7 +25,7 @@ mysql_database_user node['wordpress']['db']['user'] do
   action :create
 end
 
-%W{ % #{node['fqdn']} localhost }.each do |h|
+%W{ % localhost }.each do |h|
   mysql_database_user node['wordpress']['db']['user'] do
     connection mysql_connection_info
     password node['wordpress']['db']['password']

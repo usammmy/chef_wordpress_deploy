@@ -1,4 +1,3 @@
 # wordpress_db
 
-TODO: Enter the cookbook description here.
-
+This cookbook configures database servers required for a Wordpress deployment.
