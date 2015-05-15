@@ -1,0 +1,36 @@
+{
+  "name": "proxy-app-server",
+  "description": "A role to manually configure HA Proxy Load balanacer for all application servers",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+  },
+  "override_attributes": {
+    "haproxy": {
+      "members": [
+      {
+        "hostname": "app01_server",
+        "ipaddress": "10.10.20.11",
+        "port": 80,
+        "ssl_port": 443
+      },
+      {
+        "hostname": "app02_server",
+        "ipaddress": "10.10.20.12",
+        "port": 80,
+        "ssl_port": 443
+      }, 
+      {
+        "hostname": "app03_server",
+        "ipaddress": "10.10.20.13",
+        "port": 80,
+        "ssl_port": 443
+      }]
+    }
+  },
+  "chef_type": "role",
+  "run_list": [
+    "recipe[haproxy]"
+  ],
+  "env_run_lists": {
+  }
+}

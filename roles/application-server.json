@@ -1,0 +1,25 @@
+{
+  "name": "application-server",
+  "description": "A role to configure Wordpress application servers",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+  },
+  "override_attributes": {
+    "wordpress": {
+      "version": "latest",
+      "db": {
+        "name": "mylittlepony",
+        "user": "fluttershy",
+        "pass": "random_secret",
+        "host": "10.10.10.11"
+      }
+    }
+  },
+  "chef_type": "role",
+  "run_list": [
+    "role[base]",
+    "recipe[wordpress_app]"
+  ],
+  "env_run_lists": {
+  }
+}

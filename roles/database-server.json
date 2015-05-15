@@ -1,0 +1,26 @@
+{
+  "name": "database-server",
+  "description": "A role to configure Wordpress database servers",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+  },
+  "override_attributes": {
+    "mysql":{
+      "bind_address": "0.0.0.0"
+      },
+    "wordpress": {
+      "db": {
+        "database": "mylittlepony",
+        "user": "fluttershy",
+        "password": "random_secret"
+      }
+    }
+  },
+  "chef_type": "role",
+  "run_list": [
+    "recipe[galera::server]",
+    "recipe[wordpress_db]"
+  ],
+  "env_run_lists": {
+  }
+}
