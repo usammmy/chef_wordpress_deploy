@@ -11,8 +11,7 @@
     "wordpress": {
       "db": {
         "database": "mylittlepony",
-        "user": "fluttershy",
-        "password": "random_secret"
+        "user": "fluttershy"
       }
     }
   },
