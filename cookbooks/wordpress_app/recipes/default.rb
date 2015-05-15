@@ -4,6 +4,7 @@
 #
 # Copyright (c) 2015 The Authors, All Rights Reserved.
 
+#TODO: Handle exceptions if database is not found
 db_node = search(:node,"role:database-server").first
 
 node.set['wordpress']['db']['host'] = db_node.ipaddress
