@@ -2,11 +2,9 @@ require 'spec_helper'
 
 describe 'wordpress_db::default' do
 
-  # Serverspec examples can be found at
-  # http://serverspec.org/resource_types.html
-  
-  it 'does something' do
-    skip 'Replace this with meaningful tests'
+  describe service 'mysql' do
+    it { should be enabled }
+	it { should be running }
   end
 
 end
